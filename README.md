@@ -27,16 +27,16 @@
 
 ### 构建和运行
 
-1. 克隆项目
-   git clone https://github.com/pann-code/BlackHoleSimulation.git
-   cd BlackHoleSimulation
+1. 克隆项目  
+   git clone https://github.com/pann-code/BlackHoleSimulation.git  
+   cd BlackHoleSimulation  
 
-2. 使用Maven构建
-   mvn clean install package
+2. 使用Maven构建  
+   mvn clean install package  
 
-3. 运行程序
-   java -XstartOnFirstThread -jar ./target/BlackHoleSimulation-1.0-SNAPSHOT.jar
-   注意：在 macOS 上运行时必须添加 -XstartOnFirstThread 参数
+3. 运行程序  
+   java -XstartOnFirstThread -jar ./target/BlackHoleSimulation-1.0-SNAPSHOT.jar  
+   注意：在 macOS 上运行时必须添加 -XstartOnFirstThread 参数  
 
 ## 操作指南
 
@@ -54,23 +54,23 @@
 
 ## 项目结构
 
-BlackHoleSimulation/
-├── src/main/java/org/example/
-│   ├── BlackHoleSimulation.java      # 主程序入口
-│   ├── core/
-│   │   ├── Camera.java               # 相机控制系统
-│   │   ├── ShaderProgram.java        # 着色器管理
-│   │   ├── Sphere.java               # 球体几何体
-│   │   └── ShaderUtils.java          # 着色器工具
-│   └── simulation/
-│       ├── BlackHole.java            # 黑洞物理模拟
-│       └── AccretionDisk.java        # 吸积盘模拟
-├── src/main/resources/
-│   └── shaders/
-│       ├── vertex_shader.glsl        # 顶点着色器
-│       └── fragment_shader.glsl      # 片段着色器
-├── pom.xml                           # Maven配置
-└── README.md                         # 项目说明
+BlackHoleSimulation/  
+├── src/main/java/org/example/  
+│   ├── BlackHoleSimulation.java     # 主程序入口  
+│   ├── core/  
+│   │   ├── Camera.java               # 相机控制系统  
+│   │   ├── ShaderProgram.java        # 着色器管理  
+│   │   ├── Sphere.java               # 球体几何体  
+│   │   └── ShaderUtils.java          # 着色器工具  
+│   └── simulation/  
+│       ├── BlackHole.java            # 黑洞物理模拟  
+│       └── AccretionDisk.java        # 吸积盘模拟  
+├── src/main/resources/  
+│   └── shaders/  
+│       ├── vertex_shader.glsl        # 顶点着色器  
+│       └── fragment_shader.glsl      # 片段着色器  
+├── pom.xml                           # Maven配置  
+└── README.md                         # 项目说明  
 
 ## 技术细节
 
@@ -87,19 +87,19 @@ BlackHoleSimulation/
 - 黑体辐射 - 温度-颜色映射
 
 ### 着色器Uniforms
-uniform vec3 cameraPos;           // 相机位置
-uniform float time;               // 运行时间
-uniform vec3 blackHolePos;        // 黑洞位置
-uniform float blackHoleMass;      // 黑洞质量
-uniform float eventHorizonRadius; // 事件视界半径
-uniform float innerDiskRadius;    // 吸积盘内半径
-uniform float outerDiskRadius;    // 吸积盘外半径
+uniform vec3 cameraPos;           // 相机位置  
+uniform float time;               // 运行时间  
+uniform vec3 blackHolePos;        // 黑洞位置  
+uniform float blackHoleMass;      // 黑洞质量  
+uniform float eventHorizonRadius; // 事件视界半径  
+uniform float innerDiskRadius;    // 吸积盘内半径  
+uniform float outerDiskRadius;    // 吸积盘外半径  
 
 ## 配置参数
 
 ### 黑洞参数（可在代码中调整）
-在 BlackHoleSimulation.java 中修改
-shaderProgram.setFloat("blackHoleMass", 4.0f);           // 黑洞质量
-shaderProgram.setFloat("eventHorizonRadius", 1.2f);      // 事件视界半径
-shaderProgram.setFloat("innerDiskRadius", 2.5f);         // 吸积盘内半径
-shaderProgram.setFloat("outerDiskRadius", 8.0f);         // 吸积盘外半径
+在 BlackHoleSimulation.java 中修改  
+shaderProgram.setFloat("blackHoleMass", 4.0f);           // 黑洞质量  
+shaderProgram.setFloat("eventHorizonRadius", 1.2f);      // 事件视界半径  
+shaderProgram.setFloat("innerDiskRadius", 2.5f);         // 吸积盘内半径  
+shaderProgram.setFloat("outerDiskRadius", 8.0f);         // 吸积盘外半径  
