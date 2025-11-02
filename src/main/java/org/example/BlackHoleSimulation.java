@@ -20,7 +20,7 @@ import static org.lwjgl.opengl.GL33.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
 /**
- * 3D黑洞模拟主程序
+ * 黑洞模拟主程序
  * 使用光线步进技术模拟黑洞的引力透镜效应和吸积盘
  */
 public class BlackHoleSimulation {
@@ -129,7 +129,7 @@ public class BlackHoleSimulation {
      * 创建GLFW窗口
      */
     private void createWindow() {
-        window = glfwCreateWindow(WIDTH, HEIGHT, "3D黑洞模拟 - 引力透镜效应", NULL, NULL);
+        window = glfwCreateWindow(WIDTH, HEIGHT, "黑洞模拟 - 引力透镜效应", NULL, NULL);
         if (window == NULL) {
             throw new RuntimeException("Failed to create GLFW window");
         }

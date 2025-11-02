@@ -1,6 +1,7 @@
-# 3D 黑洞模拟
+# 基于Java语言的黑洞模拟
 
-一个基于物理的实时3D黑洞模拟程序，使用OpenGL和光线步进技术实现引力透镜效应和吸积盘渲染。
+一个基于物理的实时黑洞模拟程序，使用Java、OpenGL和光线步进技术实现引力透镜效应和吸积盘渲染。
+![](src/main/resources/pictures/black-hole.png)
 
 ## 特性
 
